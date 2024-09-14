@@ -1,0 +1,6 @@
+@RetoPracticoUno_HostAddress = http://localhost:5239
+
+GET {{RetoPracticoUno_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
