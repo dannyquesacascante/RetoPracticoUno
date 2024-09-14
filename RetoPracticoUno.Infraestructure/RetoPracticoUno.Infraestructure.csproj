@@ -1,19 +1,18 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RetoPracticoUno.Application\RetoPracticoUno.Application.csproj" />
     <ProjectReference Include="..\RetoPracticoUno.domain\RetoPracticoUno.domain.csproj" />
-    <ProjectReference Include="..\RetoPracticoUno.Infraestructure\RetoPracticoUno.Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>
