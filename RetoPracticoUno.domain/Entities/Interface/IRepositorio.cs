@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RetoPracticoUno.domain.Entities
+namespace RetoPracticoUno.Application.Interface
 {
-    public class TareasList
+    internal interface IRepositorio
     {
-
-        List<Tarea>? Tareas { get; set; }
-
     }
 }
