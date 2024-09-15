@@ -30,7 +30,6 @@ namespace RetoPracticoUno.Infraestructure.Repositorio
         public Tarea ObtenerPorId(int id)
         {
            var t = _context.Tarea.Find(id);
-            Console.WriteLine(t.Titulo);
 
             return t;
         }
