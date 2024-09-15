@@ -1,8 +1,12 @@
-﻿namespace RetoPracticoUno.domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RetoPracticoUno.domain.Entities
 {
     public class Tarea
     {
+        [Key]
         public int Id { get; set; }
+
         public string? Titulo { get; set; }
         public string? Descripcion { get; set; }
         public bool? Completada { get; set; }
@@ -13,6 +17,12 @@
             Titulo = titulo;
             Descripcion = descripcion;
             Completada = false;
+            Id = id;
+        }
+
+        public Tarea( int id)
+        {
+           
             Id = id;
         }
 

@@ -29,18 +29,23 @@ namespace RetoPracticoUno.Infraestructure.Repositorio
 
         public Tarea ObtenerPorId(int id)
         {
-            return _context.Tarea.Find(id);
+           var t = _context.Tarea.Find(id);
+            Console.WriteLine(t.Titulo);
+
+            return t;
         }
 
         public void Actualizar(Tarea tarea)
         {
             _context.Tarea.Update(tarea);
-            _context.SaveChanges();
+      _context.SaveChanges();
         }
 
-        public void Eliminar(Tarea tarea)
+        public void Eliminar(int id)
         {
-            _context.Tarea.Remove(tarea);
+            var t = new Tarea (id);
+            _context.Tarea.Attach(t);
+            _context.Tarea.Remove(t);
             _context.SaveChanges();
         }
     }
