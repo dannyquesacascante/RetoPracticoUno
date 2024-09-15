@@ -7,7 +7,7 @@ namespace RetoPracticoUno.Infraestructure.Repositorio
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Tarea> Tareas { get; set; }
+        public DbSet<Tarea> Tarea { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)

@@ -14,7 +14,7 @@ namespace RetoPracticoUno.Controllers
 
         [HttpPost]
         [Route("CrearTarea")]
-        public IActionResult CrearTarea([FromBody] Tarea dto)
+        public IActionResult CrearTarea([FromBody] TareaDto dto)
         {
             _tareaService.CrearTarea(dto.Titulo, dto.Descripcion,dto.Id);
             return Ok();

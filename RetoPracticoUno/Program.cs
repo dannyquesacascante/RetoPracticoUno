@@ -1,7 +1,8 @@
 using RetoPracticoUno.Application.Interface;
 using RetoPracticoUno.Application.Servicios;
 using RetoPracticoUno.Infraestructure.Repositorio;
-using RetoPracticoUno.
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -11,6 +12,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Registrar las dependencias
 builder.Services.AddScoped<IRepositorio, Repositorio>();
+builder.Services.AddScoped<TareaServicio>();
+
 
 // Add services to the container.
 
